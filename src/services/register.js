@@ -16,6 +16,18 @@ class Registration {
       throw error;
     }
   }
+
+  async getUsers() {
+    try {
+      const result = await axios.get(API_BASE_URL + "/users");
+
+      console.log("api result ---------------", result);
+
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export default Registration;
